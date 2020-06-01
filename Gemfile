@@ -29,6 +29,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
+  gem 'rspec-rails', '~> 4.0'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
@@ -40,6 +41,13 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'guard', '~> 2.16', '>= 2.16.2'
+  gem 'guard-rspec', '~> 4.7', '>= 4.7.3'
+  gem 'guard-cucumber', '~> 3.0'
+end
+
+group :test do
+  gem 'capybara', '~> 3.29'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
